@@ -9,7 +9,7 @@ DeviceRegistryEvents
      or RegistryKey startswith @"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run"
      or RegistryKey startswith @"HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnce"
      or RegistryKey startswith @"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce"
-// Add or remove InitiatingProcessFileName values based on your environment
+// Add or remove InitiatingProcessFileName values based on your environment (choose what you want to ignore/false pos.)
 | where InitiatingProcessFileName != "msiexec.exe" 
     and InitiatingProcessFileName != "drvinst.exe"
     and InitiatingProcessFileName != "msmpeng.exe"
